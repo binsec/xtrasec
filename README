@@ -1,0 +1,50 @@
+* Steps
+
+1. Type ~make~. This will download the right PIN version (with ~wget~), untar it
+   (~tar xvzf~), then compile versions for 32 & 64 bits.
+
+   If you do not have access to the network, you need to download and untar
+   PIN's tar archive, with the following steps:
+
+   1. Download PIN 3.6 for Linux from 
+
+     https://software.intel.com/sites/landingpage/pintool/downloads/pin-3.6-97554-g31f0a167d-gcc-linux.tar.gz
+
+
+   2. Untar it in the this directory. 
+
+      #+begin_src sh
+        tar zxvf <directory>/pin-3.6-97554-g31f0a167d-gcc-linux.tar.gz
+      #+end_src
+
+      Your directory structure should now look like this:
+      #+name: ls
+      #+begin_src shell :results raw
+      ls
+      #+end_src
+
+      #+RESULTS: ls
+      Makefile
+      pin-3.6-97554-g31f0a167d-gcc-linux
+      README
+      src
+
+      The 2 steps above are exactly what ~make pin~ does (it also removes the
+      archive).
+
+   3. Type ~make~
+
+
+   
+
+2. Test with
+
+    #+begin_src sh
+    make test
+    #+end_src
+
+* Docker
+
+  To download the correct PIN version, type ~make pin~.
+
+  PIN's license does not grant redistribution rights.
